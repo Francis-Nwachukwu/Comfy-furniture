@@ -48,7 +48,7 @@ class UI {
                 class="product-img"
               />
               <button class="bag-btn" data-id=${product.id}>
-                <i class="fas fa-shopping-cart">add to bag</i>
+                <i class="fas fa-shopping-cart">add to cart</i>
               </button>
             </div>
             <h3>${product.title}</h3>
