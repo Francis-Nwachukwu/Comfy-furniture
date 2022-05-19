@@ -2,11 +2,30 @@ const cartBtn = document.querySelector(".cart-btn");
 const closeCartBtn = document.querySelector(".close-cart");
 const clearCartBtn = document.querySelector(".clear-cart");
 const cartDOM = document.querySelector(".cart");
+const sidebar = document.querySelector(".sidebar");
 const cartOverlay = document.querySelector(".cart-overlay");
+const sidebarOverlay = document.querySelector(".sidebar-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+const sidebarBtn = document.querySelector(".sidebar-btn");
+const closeSidebarBtn = document.querySelector(".close-sidebar");
+
+const showSidebar = () => {
+  sidebarOverlay.classList.add("transparentBcg");
+  sidebar.classList.add("showSidebar");
+};
+sidebarBtn.addEventListener("click", () => {
+  showSidebar();
+});
+const hideSidebar = () => {
+  sidebar.classList.remove("showSidebar");
+  sidebarOverlay.classList.remove("transparentBcg");
+};
+closeSidebarBtn.addEventListener("click", () => {
+  hideSidebar();
+});
 
 // cart
 let cart = [];
